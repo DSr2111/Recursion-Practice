@@ -27,3 +27,10 @@ function isPalindrome(str, idx = 0) {
   if (str[leftidx] !== str[rightIdx]) return false;
   return isPalindrome(str, idx + 1);
 }
+
+// return the index of the val in arr, or -1 if not there
+function findIndex(arr, val, idx = 0) {
+  if (idx === arr.length) return -1;
+  if (arr[idx] === val) return idx;
+  return findIndex(arr, val, idx + 1);
+}
