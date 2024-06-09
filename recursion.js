@@ -11,3 +11,11 @@ function longest(words, idx = 0, longestSoFar = 0) {
   longestSoFar = Math.max(words[idx].length, longestSoFar);
   return longest(words, idx + 1, longestSoFar);
 }
+
+// return a string with every other letter
+
+function everyOther(str, idx = 0, newStr = "") {
+  if (idx >= str.length) return newStr;
+  newStr += str[idx];
+  return everyOther(str, idx + 2, newStr);
+}
