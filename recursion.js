@@ -41,3 +41,15 @@ function revString(str, idx = 0, newStr = "") {
   newStr += str[str.length - 1 - idx];
   return revString(str, idx + 1, newStr);
 }
+
+// return an array of all string values in an obj
+
+function gatherStrings(obj) {
+  let stringArr = [];
+  for (let key in obj) {
+    if (typeof obj[key] === "string") stringArr.push(obj[key]);
+    if (typeof obj[key] === "object")
+      stringArr.push(...gatherStrings(obj[key]));
+  }
+  return stringArr;
+}
