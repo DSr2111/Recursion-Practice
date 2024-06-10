@@ -68,3 +68,14 @@ function binarySearch(arr, val, left = 0, right = arr.length) {
   }
   return binarySearch(arr, val, middle + 1, right);
 }
+
+module.exports = {
+  product,
+  longest,
+  everyOther,
+  isPalindrome,
+  findIndex,
+  revString,
+  gatherStrings,
+  binarySearch,
+};
