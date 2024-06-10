@@ -34,3 +34,10 @@ function findIndex(arr, val, idx = 0) {
   if (arr[idx] === val) return idx;
   return findIndex(arr, val, idx + 1);
 }
+
+// return reversed copy of a string
+function revString(str, idx = 0, newStr = "") {
+  if (newStr.length === str.length) return newStr;
+  newStr += str[str.length - 1 - idx];
+  return revString(str, idx + 1, newStr);
+}
